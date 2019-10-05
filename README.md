@@ -1,6 +1,6 @@
 # keysto
 
-is a humble library to transform javascript object. currently supported is :
+is a humble library to transform javascript object `key`. currently supported is :
 - snake case
 - camel case
 
