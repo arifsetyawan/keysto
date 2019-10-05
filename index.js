@@ -1,2 +1,3 @@
-export { default as setKey } from 'src/keysTo';
+const keyto = require('./lib/keysTo');
 
+module.exports = keyto;
