@@ -11,6 +11,10 @@ currently supported transformation
 npm install keysto
 ```
 
+### Available Function :
+- `.toSnakeCase()`
+- `.toCamelCase()`
+
 ### Usage :
 ```
 const keysTo = require('keysto');
