@@ -1,4 +1,4 @@
-import { setKey }  from '../keysTo';
+const keysTo = require("../keysTo");
 
 describe('keysTo', function () {
   it('camel to snake case on complex input', function () {
@@ -20,7 +20,7 @@ describe('keysTo', function () {
         }
       ]
     }
-    let newObj = setKey(targetObj).toSnakeCase();
+    let newObj = keysTo.setKey(targetObj).toSnakeCase();
     console.log(newObj);
   });
 
@@ -35,7 +35,7 @@ describe('keysTo', function () {
           itemQty: 4
         }
       ];
-    let newObj = setKey(targetObj).toSnakeCase();
+    let newObj = keysTo.setKey(targetObj).toSnakeCase();
     console.log(newObj);
   });
 
@@ -58,7 +58,7 @@ describe('keysTo', function () {
         }
       ]
     }
-    let newObj = setKey(targetObj).toCamelCase();
+    let newObj = keysTo.setKey(targetObj).toCamelCase();
     console.log(newObj);
   });
 
@@ -73,7 +73,7 @@ describe('keysTo', function () {
         item_qty: 4
       }
     ];
-    let newObj = setKey(targetObj).toCamelCase();
+    let newObj = keysTo.setKey(targetObj).toCamelCase();
     console.log(newObj);
   });
 
@@ -96,22 +96,22 @@ describe('keysTo', function () {
         }
       ]
     }
-    let newObj = setKey(targetObj).toCamelCase();
+    let newObj = keysTo.setKey(targetObj).toCamelCase();
     console.log(newObj);
   });
 
   it('empty Obj', function () {
     let targetObj = {};
-    let newObj = setKey(targetObj).toCamelCase();
+    let newObj = keysTo.setKey(targetObj).toCamelCase();
   });
 
   it('empty Array', function () {
     let targetObj = [];
-    let newObj = setKey(targetObj).toCamelCase();
+    let newObj = keysTo.setKey(targetObj).toCamelCase();
   });
 
   it('no params', function () {
-    let newObj = setKey().toCamelCase();
+    let newObj = keysTo.setKey().toCamelCase();
   });
 
 });

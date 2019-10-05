@@ -1,43 +1,24 @@
-import strCase from 'case';
+const strCase = require('case');
 
-export function setKey(inputObj) {
-  let keyToObj = new KeyTo(inputObj);
-  return keyToObj;
+module.exports.setKey = (inputObj) => {
+  let transformOption = {
+    toCamelCase() {
+      return transform(inputObj, strCase.camel)
+    },
+    toSnakeCase() {
+      return transform(inputObj, strCase.snake)
+    }
+  };
+  return transformOption;
 };
 
-class KeyTo {
-
-  get objectTo() {
-    return this._objectTo;
-  }
-
-  set objectTo(value) {
-    this._objectTo = value;
-  }
-
-  _objectTo;
-
-  constructor(objectTo) {
-    this.objectTo = objectTo;
-  }
-
-  toCamelCase() {
-    return this::transform(this.objectTo, strCase.camel)
-  }
-
-  toSnakeCase() {
-    return this::transform(this.objectTo, strCase.snake);
-  }
-
-}
-
-function transform(targetObj, method) {
+const transform = (targetObj, method) => {
   let newObj = {}
   if (!targetObj) return false;
   if (targetObj && targetObj.length === 0) return false;
   for (let key in targetObj) {
     if (typeof targetObj[key] === 'object') {
-      newObj[method(key)] = this::transform(targetObj[key], method);
+      newObj[method(key)] = transform(targetObj[key], method);
     } else {
       newObj[method(key)] = targetObj[key];
     }
