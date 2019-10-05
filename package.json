@@ -1,6 +1,6 @@
 {
   "name": "keysto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node library to transform object keys to another format",
   "main": "lib/keysTo.js",
   "scripts": {
