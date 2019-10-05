@@ -1,2 +1,2 @@
-export { default as keyTo } from 'src/keysTo';
+export { default as setKey } from 'src/keysTo';
 
