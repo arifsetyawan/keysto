@@ -2,7 +2,7 @@
   "name": "keysto",
   "version": "1.0.0",
   "description": "Node library to transform object keys to another format",
-  "main": "index.js",
+  "main": "lib/keysTo.js",
   "scripts": {
     "test": "jest",
     "build": "./node_modules/.bin/gulp"
@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/arifsetyawan/keysto#readme",
   "dependencies": {
+    "case": "^1.6.2"
+  },
+  "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-export-default-from": "^7.5.2",
@@ -30,13 +33,13 @@
     "@babel/plugin-transform-flow-strip-types": "^7.4.4",
     "@babel/preset-env": "^7.6.2",
     "babel-plugin-dynamic-import-node": "^2.3.0",
-    "case": "^1.6.2",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "jest-environment-node": "24.8.0"
   },
   "jest": {
     "verbose": true
   }
-}
+},
