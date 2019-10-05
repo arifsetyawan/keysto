@@ -1,0 +1,40 @@
+{
+  "name": "keysto",
+  "version": "1.0.0",
+  "description": "Node library to transform object keys to another format",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arifsetyawan/keysto.git"
+  },
+  "keywords": [
+    "transform",
+    "key",
+    "object"
+  ],
+  "author": "Arif Setyawan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arifsetyawan/keysto/issues"
+  },
+  "homepage": "https://github.com/arifsetyawan/keysto#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.4.4",
+    "@babel/preset-env": "^7.6.2",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "case": "^1.6.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
