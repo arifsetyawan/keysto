@@ -16,7 +16,7 @@ const transform = (targetObj, method) => {
   let newObj = {};
   if (!targetObj) return false;
 
-  if (targetObj && targetObj.length === 0) return false;
+  if (targetObj && targetObj.length === 0) return [];
 
   if (targetObj && typeof targetObj === "object" && !Array.isArray(targetObj)) {
     for (let key in targetObj) {
